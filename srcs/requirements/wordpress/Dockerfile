@@ -1,4 +1,4 @@
-FROM alpine:3.17.4
+FROM bullseye:11.7
 
 RUN apk add --no-cache   php81 \
   php81-ctype \
