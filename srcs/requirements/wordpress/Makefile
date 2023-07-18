@@ -1,7 +1,9 @@
+IMAGE = inception_wordpress
+
 # Build image
 all:
-	docker build -t inception_wordpress .
+	docker build -t $(IMAGE) .
 
 # For debug/dev purpose
 run:
-	docker run --rm -it --name inception_wordpress inception_wordpress:latest
+	docker run --rm -it --name $(IMAGE) $(IMAGE):latest
