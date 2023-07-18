@@ -6,4 +6,4 @@ all:
 
 # For debug/dev purpose
 run:
-	docker run --rm -it --name $(IMAGE) $(IMAGE):latest
+	docker run --rm -it -h $(IMAGE) --name $(IMAGE) $(IMAGE):latest
