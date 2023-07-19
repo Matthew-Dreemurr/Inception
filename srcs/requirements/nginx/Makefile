@@ -6,4 +6,4 @@ all:
 
 # For debug/dev purpose
 run:
-	docker run --rm  -p 8283:80 -p 8284:443 --name $(IMAGE) $(IMAGE):latest
+	docker run --rm -h $(IMAGE) -p 8283:80 -p 8284:443 --name $(IMAGE) $(IMAGE):latest
