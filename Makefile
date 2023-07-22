@@ -11,3 +11,4 @@ run:
 rm:
 	for i in $(REQUIREMENT); do docker image rm -f inception_$$i; done
 	for i in $(REQUIREMENT); do docker container rm -f inception_$$i; done
+	docker volume rm srcs_inception_db_data srcs_inception_app_data
