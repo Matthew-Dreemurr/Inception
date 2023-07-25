@@ -21,13 +21,9 @@ services:
     build: srcs/requirements/wordpress
     depends_on:
       - mariadb
-    # ports:
-      # - 9000:9000
     volumes:
       - inception_app_data:/app
     env_file: .env
-    # environment:
-      # - NODE_ENV=production
     networks:
       - inception_net
     restart: unless-stopped
@@ -40,7 +36,6 @@ services:
       - 8589:3306
     volumes:
       - inception_db_data:/var/lib/mysql
-      # - host:container
     env_file: .env
     networks:
       - inception_net
