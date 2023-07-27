@@ -15,8 +15,9 @@ else
 	exit 1;
 fi
 
-# echo "[INFO] Create admin user"
-
+echo "[INFO] Create admin user"
+wp core install --url=localhost --title=test --admin_user=test --admin_email=test@test.com
+wp user create bob test@test.test --user_pass=test --display_name=Test 
 echo "[INFO] Starting php-fpm"
 
 php-fpm -F
