@@ -6,7 +6,6 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 RUN rm /etc/nginx/sites-enabled/default
-COPY tools/nginx.conf /etc/nginx/
 COPY tools/mahadad.42.fr.conf /etc/nginx/sites-enabled/
 
 RUN mkdir -p /etc/nginx/ssl && openssl req -x509 \
