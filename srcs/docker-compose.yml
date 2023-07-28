@@ -32,8 +32,6 @@ services:
     container_name: inception_mariadb
     image: inception/mariadb
     build: srcs/requirements/mariadb
-    ports:
-      - 8589:3306
     volumes:
       - inception_db_data:/var/lib/mysql
     env_file: .env
