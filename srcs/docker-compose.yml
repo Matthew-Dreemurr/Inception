@@ -46,14 +46,14 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: requirements/wordpress/data
+      device: $HOME/data/wp
 
   inception_db_data:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: requirements/mariadb/data
+      device: $HOME/data/db
 
 networks:
   inception_net:

@@ -45,7 +45,7 @@ run_insatll () {
 wp config path 2>/dev/null
 
 if [ $? -eq 0 ]; then
-	echo "[INFO] WP install, skip installtion"
+	echo "[INFO] WP is install, skip installtion"
 	check_db;
 else
 	echo "[INFO] WP not install"
